@@ -1,0 +1,15 @@
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: cache-sync-job
+spec:
+  schedule: "0 8 * * *"  
+  jobTemplate:
+    spec:
+      template:
+        spec:
+          containers:
+          - name: sa-cache-sync
+            image: registry.cgraaaj.in/stockx-fo-cache:latest
+            command: ["python", "sa-cache-manager.py"]
+          restartPolicy: OnFailure
