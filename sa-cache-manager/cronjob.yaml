@@ -12,4 +12,7 @@ spec:
           - name: sa-cache-sync
             image: registry.cgraaaj.in/stock-x/stockx-fo-cache:latest
             command: ["python", "sa-cache-manager.py"]
+            env:
+              - name: IGNITE_HOST
+                value: 192.168.1.72
           restartPolicy: OnFailure
