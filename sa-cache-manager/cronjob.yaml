@@ -10,6 +10,6 @@ spec:
         spec:
           containers:
           - name: sa-cache-sync
-            image: registry.cgraaaj.in/stock-x/stockx-fo-cache:latest
+            image: registry.cgraaaj.in/stock-x/stockx-fo-cache:1.0
             command: ["python", "sa-cache-manager.py"]
           restartPolicy: OnFailure
