@@ -17,9 +17,9 @@ spec:
                 value: 192.168.1.72
             resources:
               requests:
-                memory: "256Mi"
+                memory: "1.5Gi"
                 cpu: "200m"
               limits:
-                memory: "512Mi"
+                memory: "2Gi"
                 cpu: "500m"
           restartPolicy: OnFailure
