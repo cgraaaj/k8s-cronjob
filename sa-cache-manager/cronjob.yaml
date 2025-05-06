@@ -15,4 +15,11 @@ spec:
             env:
               - name: IGNITE_HOST
                 value: 192.168.1.72
+            resources:
+              requests:
+                memory: "256Mi"
+                cpu: "200m"
+              limits:
+                memory: "512Mi"
+                cpu: "500m"
           restartPolicy: OnFailure
